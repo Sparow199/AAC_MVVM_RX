@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AAC_MVVM_RX.iml" filepath="$PROJECT_DIR$/AAC_MVVM_RX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aac_livedata/aac_livedata.iml" filepath="$PROJECT_DIR$/aac_livedata/aac_livedata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aac_rxjava/aac_rxjava.iml" filepath="$PROJECT_DIR$/aac_rxjava/aac_rxjava.iml" />
+    </modules>
+  </component>
+</project>
