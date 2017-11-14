@@ -21,11 +21,11 @@ public interface ProjectDao {
     /***********************************************************************************************
      * Etape == 01 -->> prochaine étape -->> ProjectRepository
      **********************************************************************************************/
-//    @Query("SELECT * FROM project")
-//    LiveData<List<Project>> getAll();
-//
-//    @Query("SELECT *FROM project WHERE project_name = :projectName LIMIT 1")
-//    LiveData<Project>findOneProject(String projectName);
+    @Query("SELECT * FROM project")
+    LiveData<List<Project>> getAll();
+
+    @Query("SELECT *FROM project WHERE project_name = :projectName LIMIT 1")
+    LiveData<Project>findOneProject(String projectName);
     /***********************************************************************************************
      **********************************************************************************************/
 

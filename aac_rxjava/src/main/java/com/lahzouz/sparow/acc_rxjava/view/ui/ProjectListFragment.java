@@ -51,26 +51,26 @@ public class ProjectListFragment extends BaseFragment {
     /***********************************************************************************************
      * Etape == 07 -->> prochaine étape -->> ProjectFragment
      **********************************************************************************************/
-//    private void observeViewModel(ProjectListViewModel viewModel) {
-//        // Update the list when the data changes
-//        addDisposable(
-//                viewModel.getProjectListObservable()
-//                        .subscribeOn(Schedulers.io())
-//                        .observeOn(AndroidSchedulers.mainThread())
-//                        .subscribe(new Consumer<List<Project>>() {
-//                            @Override
-//                            public void accept(List<Project> projects) throws Exception {
-//                                binding.setIsLoading(false);
-//                                projectAdapter.setProjectList(projects);
-//                            }
-//                        }, new Consumer<Throwable>() {
-//                            @Override
-//                            public void accept(Throwable throwable) throws Exception {
-//                                Log.d("ERROR", "An error happens");
-//                            }
-//                        })
-//        );
-//    }
+    private void observeViewModel(ProjectListViewModel viewModel) {
+        // Update the list when the data changes
+        addDisposable(
+                viewModel.getProjectListObservable()
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new Consumer<List<Project>>() {
+                            @Override
+                            public void accept(List<Project> projects) throws Exception {
+                                binding.setIsLoading(false);
+                                projectAdapter.setProjectList(projects);
+                            }
+                        }, new Consumer<Throwable>() {
+                            @Override
+                            public void accept(Throwable throwable) throws Exception {
+                                Log.d("ERROR", "An error happens");
+                            }
+                        })
+        );
+    }
     /***********************************************************************************************
      **********************************************************************************************/
 

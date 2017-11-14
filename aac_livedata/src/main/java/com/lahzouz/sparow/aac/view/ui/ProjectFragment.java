@@ -49,18 +49,18 @@ public class ProjectFragment extends Fragment implements LifecycleOwner{
     /***********************************************************************************************
      * Etape == 06 -->> prochaine étape -->> le module aac_rxjava -->> ProjectListFragment
      **********************************************************************************************/
-//    private void observeViewModel(final ProjectViewModel viewModel) {
-//        // Observe project data
-//        viewModel.getObservableProject().observe(this, new Observer<Project>() {
-//            @Override
-//            public void onChanged(@Nullable Project project) {
-//                if (project != null) {
-//                    binding.setIsLoading(false);
-//                    viewModel.setProject(project);
-//                }
-//            }
-//        });
-//    }
+    private void observeViewModel(final ProjectViewModel viewModel) {
+        // Observe project data
+        viewModel.getObservableProject().observe(this, new Observer<Project>() {
+            @Override
+            public void onChanged(@Nullable Project project) {
+                if (project != null) {
+                    binding.setIsLoading(false);
+                    viewModel.setProject(project);
+                }
+            }
+        });
+    }
     /***********************************************************************************************
      **********************************************************************************************/
 

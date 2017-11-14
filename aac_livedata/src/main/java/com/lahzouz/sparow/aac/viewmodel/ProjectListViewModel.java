@@ -46,11 +46,11 @@ public class ProjectListViewModel extends AndroidViewModel {
     /***********************************************************************************************
      * Etape == 03 -->> prochaine étape -->> ProjectViewModel
      **********************************************************************************************/
-//        // uncomment to switch to local database mode
-//        projectListObservable = appDatabase.ProjectModel().getAll();
-//
-//        // uncomment to switch to Remote repository mode
-////        projectListObservable = ProjectRepository.getInstance().getProjectList("Apolline-Lille");
+        // uncomment to switch to local database mode
+        projectListObservable = appDatabase.ProjectModel().getAll();
+
+        // uncomment to switch to Remote repository mode
+//        projectListObservable = ProjectRepository.getInstance().getProjectList("Apolline-Lille");
     /***********************************************************************************************
      **********************************************************************************************/
     }

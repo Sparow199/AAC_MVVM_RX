@@ -64,25 +64,25 @@ public class ProjectRepository {
     /***********************************************************************************************
      * Etape == 02 partie 2/2 -->> prochaine étape -->> ProjectListViewModel
      **********************************************************************************************/
-//    public LiveData<Project> getProjectDetails(String userID, String projectName) {
-//        final MutableLiveData<Project> data = new MutableLiveData<>();
-//
-//        gitHubService.getProjectDetails(userID, projectName).enqueue(new Callback<Project>() {
-//            @Override
-//            public void onResponse(Call<Project> call, Response<Project> response) {
-//                simulateDelay();
-//                data.setValue(response.body());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Project> call, Throwable t) {
-//                // TODO better error handling in part #2 ...
-//                data.setValue(null);
-//            }
-//        });
-//
-//        return data;
-//    }
+    public LiveData<Project> getProjectDetails(String userID, String projectName) {
+        final MutableLiveData<Project> data = new MutableLiveData<>();
+
+        gitHubService.getProjectDetails(userID, projectName).enqueue(new Callback<Project>() {
+            @Override
+            public void onResponse(Call<Project> call, Response<Project> response) {
+                simulateDelay();
+                data.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<Project> call, Throwable t) {
+                // TODO better error handling in part #2 ...
+                data.setValue(null);
+            }
+        });
+
+        return data;
+    }
     /***********************************************************************************************
      **********************************************************************************************/
 

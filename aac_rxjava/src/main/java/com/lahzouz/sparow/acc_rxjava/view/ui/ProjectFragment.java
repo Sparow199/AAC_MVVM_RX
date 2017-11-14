@@ -48,26 +48,26 @@ public class ProjectFragment extends BaseFragment {
     /***********************************************************************************************
      * Etape == 08 -->> prochaine étape -->> Félicitations ! c'est fini
      **********************************************************************************************/
-//    private void observeViewModel(final ProjectViewModel viewModel) {
-//        // Observe project data
-//        addDisposable(
-//                viewModel.getObservableProject()
-//                        .subscribeOn(Schedulers.io())
-//                        .observeOn(AndroidSchedulers.mainThread())
-//                        .subscribe(new Consumer<Project>() {
-//                            @Override
-//                            public void accept(Project project) throws Exception {
-//                                binding.setIsLoading(false);
-//                                viewModel.setProject(project);
-//                            }
-//                        }, new Consumer<Throwable>() {
-//                            @Override
-//                            public void accept(Throwable throwable) throws Exception {
-//                                Log.d("ERROR", "An error happens");
-//                            }
-//                        })
-//        );
-//    }
+    private void observeViewModel(final ProjectViewModel viewModel) {
+        // Observe project data
+        addDisposable(
+                viewModel.getObservableProject()
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(new Consumer<Project>() {
+                            @Override
+                            public void accept(Project project) throws Exception {
+                                binding.setIsLoading(false);
+                                viewModel.setProject(project);
+                            }
+                        }, new Consumer<Throwable>() {
+                            @Override
+                            public void accept(Throwable throwable) throws Exception {
+                                Log.d("ERROR", "An error happens");
+                            }
+                        })
+        );
+    }
     /***********************************************************************************************
      **********************************************************************************************/
     /** Creates project fragment for specific project ID */

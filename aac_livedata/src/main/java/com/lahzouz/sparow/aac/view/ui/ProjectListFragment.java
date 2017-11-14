@@ -52,18 +52,18 @@ public class ProjectListFragment extends Fragment implements LifecycleOwner {
     /***********************************************************************************************
      * Etape == 05 -->> prochaine étape -->> ProjectFragment
      **********************************************************************************************/
-//    private void observeViewModel(ProjectListViewModel viewModel) {
-//        // Update the list when the data changes
-//        viewModel.getProjectListObservable().observe(this, new Observer<List<Project>>() {
-//            @Override
-//            public void onChanged(@Nullable List<Project> projects) {
-//                if (projects != null) {
-//                    binding.setIsLoading(false);
-//                    projectAdapter.setProjectList(projects);
-//                }
-//            }
-//        });
-//    }
+    private void observeViewModel(ProjectListViewModel viewModel) {
+        // Update the list when the data changes
+        viewModel.getProjectListObservable().observe(this, new Observer<List<Project>>() {
+            @Override
+            public void onChanged(@Nullable List<Project> projects) {
+                if (projects != null) {
+                    binding.setIsLoading(false);
+                    projectAdapter.setProjectList(projects);
+                }
+            }
+        });
+    }
     /***********************************************************************************************
      **********************************************************************************************/
     private final ProjectClickCallback projectClickCallback = new ProjectClickCallback() {

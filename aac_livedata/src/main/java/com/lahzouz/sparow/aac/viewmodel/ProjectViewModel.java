@@ -29,10 +29,10 @@ public class ProjectViewModel extends AndroidViewModel {
     /***********************************************************************************************
      * Etape == 04 -->> prochaine étape -->> ProjectListFragment
      **********************************************************************************************/
-//        // uncomment to switch to Database mode
-//        projectObservable = appDatabase.ProjectModel().findOneProject(projectID);
-//        // uncomment to switch to Remote repository mode
-////        projectObservable = ProjectRepository.getInstance().getProjectDetails("Apolline-Lille", projectID);
+        // uncomment to switch to Database mode
+        projectObservable = appDatabase.ProjectModel().findOneProject(projectID);
+        // uncomment to switch to Remote repository mode
+//        projectObservable = ProjectRepository.getInstance().getProjectDetails("Apolline-Lille", projectID);
     /***********************************************************************************************
      **********************************************************************************************/
     }
